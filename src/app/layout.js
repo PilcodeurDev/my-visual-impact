@@ -1,7 +1,7 @@
 /**
  * The external imports
  */
-import { Lato, Open_Sans } from 'next/font/google'
+import { Poppins, Roboto } from 'next/font/google'
 
 
 /**
@@ -9,14 +9,15 @@ import { Lato, Open_Sans } from 'next/font/google'
  */
 import '@/styles/styles.sass'
 
-const lato = Lato({
+const poppins = Poppins({
   subsets: ['latin'],
   weight: ["400", "700", "900"],
-  variable: "--font-lato"
+  variable: "--font-poppins"
 });
 
-const openSans = Open_Sans({
+const roboto = Roboto({
   subsets: ['latin'],
+  weight: ["500"],
   variable: "--font-open-sans"
 });
 
@@ -27,7 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${openSans.className} ${openSans.variable} ${lato.variable}`}>{children}</body>
+      <body className={`${roboto.className} ${roboto.variable} ${poppins.variable} platine`}>{children}</body>
     </html>
   )
 }
