@@ -21,7 +21,7 @@ export default function Home() {
               vos visiteurs dès les premières secondes.
             </p>
             <div>
-              <Button href="/about" icon={IconTypes.ARROW_RIGHT}>
+              <Button href="/" icon={IconTypes.ARROW_RIGHT}>
                 À propos de moi
               </Button>
             </div>
