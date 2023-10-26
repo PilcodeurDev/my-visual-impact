@@ -8,6 +8,8 @@ import { Poppins, Roboto } from 'next/font/google'
  * The internal imports
  */
 import '@/styles/styles.sass'
+import Navbar from '@/components/navbar/navbar'
+
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -28,7 +30,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${roboto.className} ${roboto.variable} ${poppins.variable} platine`}>{children}</body>
+      <body className={`${roboto.className} ${roboto.variable} ${poppins.variable}`}>
+        {children}
+        {/* <Navbar /> */}
+      </body>
     </html>
   )
 }
