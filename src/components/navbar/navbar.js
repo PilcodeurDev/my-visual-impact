@@ -17,7 +17,7 @@ const pagesArray = [
   {
     id: 1,
     path: "/",
-    text: "Acceuil",
+    text: "Accueil",
     icon: faHouse,
   },
   {
