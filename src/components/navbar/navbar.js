@@ -51,18 +51,18 @@ const Navbar = () => {
   const pathname = usePathname()
 
   return (
-    <header className="nav">
-      <ul className="icon-menu">
+    <nav className={styles.navbar}>
+      <ul>
         {pagesArray.map((page) => (
-          <li key={page.id} className="icon-box">
+          <li key={page.id} className={styles.icon_box}>
             <Link href={page.path} >
-              <FontAwesomeIcon icon={page.icon} width={50} height={50} />
-              <h2>{page.text}</h2>
+              <FontAwesomeIcon icon={page.icon} className={styles.icon}/>
+              <h6>{page.text}</h6>
             </Link>
           </li>
         ))}
       </ul>
-    </header>
+    </nav>
   )
 }
 export default Navbar

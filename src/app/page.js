@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Button, { IconTypes } from '@/components/button/button'
+import Navbar from '@/components/navbar/navbar'
 
 export default function Home() {
   return (
@@ -10,8 +11,8 @@ export default function Home() {
           <div className='profil'></div>
           <div className='text-presentation'>
             <h1>
-              <font className="main-color">je m'appelle</font>
-              <font className="main-color">simon despres .</font>
+              <font>je m'appelle</font>
+              <font>simon despres .</font>
               <font>concepteur de</font>
               <font>sites web</font>
             </h1>
@@ -27,8 +28,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          {/* navbar */}
-          <div>superbe navbar</div>
+          <Navbar />
         </div>
       </div>
     </div>
