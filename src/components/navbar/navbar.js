@@ -46,7 +46,6 @@ const pagesArray = [
   },
 ];
 
-
 const Navbar = () => {
   const pathname = usePathname()
 
