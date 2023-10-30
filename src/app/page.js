@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import Button, { IconTypes } from '@/components/button/button'
-import Navbar from '@/components/navbar/navbar'
 
 export default function Home() {
   return (
@@ -18,17 +17,16 @@ export default function Home() {
             </h1>
             <p>
               Je suis concepteur Web ainsi que développeur front-end basé à la
-              frontière Franco-Suisse. Je suis passioné par la création
-              d'interface utilisateur intéractive et dynamique qui captivera
+              frontière Franco-Suisse. Je suis passionné par la création
+              d'interface utilisateur interactive et dynamique qui captivera
               vos visiteurs dès les premières secondes.
             </p>
             <div>
-              <Button href="/" icon={IconTypes.ARROW_RIGHT}>
+              <Button href="/about" icon={IconTypes.ARROW_RIGHT}>
                 À propos de moi
               </Button>
             </div>
           </div>
-          <Navbar />
         </div>
       </div>
     </div>

@@ -6,18 +6,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faBook, faEnvelope, faComment } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 /**
  * The internal imports
  */
 import styles from './navbar.module.sass'
 
-const pagesArray = [
+const menuIcons = [
   {
     id: 1,
     path: "/",
-    text: "Acceuil",
+    text: "Accueil",
     icon: faHouse,
   },
   {
@@ -47,12 +46,11 @@ const pagesArray = [
 ];
 
 const Navbar = () => {
-  const pathname = usePathname()
 
   return (
     <nav className={styles.navbar}>
       <ul>
-        {pagesArray.map((page) => (
+        {menuIcons.map((page) => (
           <li key={page.id} className={styles.icon_box}>
             <Link href={page.path} >
               <FontAwesomeIcon icon={page.icon} className={styles.icon}/>
