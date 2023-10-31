@@ -93,6 +93,7 @@ const About = () => {
                 </div>
               ))}
             </div>
+            <div className="button"></div>
           </div>
           <div className="col_5">
             <h4>Mes compétences</h4>
