@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+
 import BlockDecoration from '@/components/block-decoration/block-decoration'
 import Button, { IconTypes } from '@/components/button/button'
 
@@ -6,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <BlockDecoration/>
-      <div className='container'>
+      <div className='container pt-40'>
         <div className='row'>
           <div className='profil'></div>
           <div className='text-presentation'>

@@ -1,7 +1,7 @@
 /**
  * The external imports
  */
-import { Poppins, Roboto } from 'next/font/google'
+import { Poppins, Montaga } from 'next/font/google'
 
 
 /**
@@ -17,10 +17,10 @@ const poppins = Poppins({
   variable: "--font-poppins"
 });
 
-const roboto = Roboto({
+const montaga = Montaga({
   subsets: ['latin'],
-  weight: ["500"],
-  variable: "--font-open-sans"
+  weight: ["400"],
+  variable: "--font-montaga"
 });
 
 export const metadata = {
@@ -30,7 +30,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${roboto.className} ${roboto.variable} ${poppins.variable}`}>
+      <body className={`${montaga.className} ${montaga.variable} ${poppins.variable}`}>
         {children}
         <Navbar />
       </body>
