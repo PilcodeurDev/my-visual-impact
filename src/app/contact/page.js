@@ -1,6 +1,10 @@
+import BlockDecoration from "@/components/block-decoration/block-decoration"
+
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <div>
+      <BlockDecoration />
+    </div>
   )
 }
 export default Contact

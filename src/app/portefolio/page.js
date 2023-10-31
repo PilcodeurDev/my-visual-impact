@@ -1,6 +1,10 @@
+import BlockDecoration from "@/components/block-decoration/block-decoration"
+
 const Portefolio = () => {
   return (
-    <div>Portefolio</div>
+    <div>
+      <BlockDecoration />
+    </div>
   )
 }
 export default Portefolio

@@ -1,6 +1,10 @@
+import BlockDecoration from "@/components/block-decoration/block-decoration"
+
 const Blog = () => {
   return (
-    <div>Blog</div>
+    <div>
+      <BlockDecoration />
+    </div>
   )
 }
 export default Blog

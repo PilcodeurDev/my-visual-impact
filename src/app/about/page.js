@@ -1,6 +1,11 @@
+import BlockDecoration from "@/components/block-decoration/block-decoration"
+
 const About = () => {
   return (
-    <div>About</div>
+    <div>
+      <BlockDecoration/>
+      <p>hello</p>
+    </div>
   )
 }
 export default About
