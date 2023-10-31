@@ -1,3 +1,10 @@
+/**
+ * The external imports
+ */
+import { FaWhatsappSquare } from "react-icons/fa";
+/**
+ * The internal imports
+ */
 import BlockDecoration from "@/components/block-decoration/block-decoration"
 import styles from './about.module.sass'
 
@@ -45,18 +52,16 @@ const myInformations = [
   {
     id: 9,
     title: "What's App :",
-    value: "What's App",
-
-    // (
-      // <a
-      //   href="https://wa.me/33614421780"
-      //   rel="noreferrer"
-      //   // target="_blank"
-      //   className="text-[#3DE05B] text-2xl relative -top-1"
-      // >
-      //   <FaWhatsappSquare />
-      // </a>
-    // ),
+    value: (
+      <a
+        href="https://wa.me/33614421780"
+        rel="noreferrer"
+        target="_blank"
+        className={styles.iconWhatsApp}
+      >
+        <FaWhatsappSquare />
+      </a>
+    ),
   },
   {
     id: 10,
