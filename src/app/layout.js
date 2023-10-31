@@ -1,7 +1,7 @@
 /**
  * The external imports
  */
-import { Poppins, Montaga } from 'next/font/google'
+import { Poppins, Montserrat } from 'next/font/google'
 
 
 /**
@@ -17,10 +17,10 @@ const poppins = Poppins({
   variable: "--font-poppins"
 });
 
-const montaga = Montaga({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ["400"],
-  variable: "--font-montaga"
+  weight: ["400", "600"],
+  variable: "--font-montserrat"
 });
 
 export const metadata = {
@@ -30,7 +30,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${montaga.className} ${montaga.variable} ${poppins.variable}`}>
+      <body className={`${montserrat.className} ${montserrat.variable} ${poppins.variable}`}>
         {children}
         <Navbar />
       </body>

@@ -79,7 +79,7 @@ const About = () => {
         </header>
         <div className={`${styles.rowCenter} row`}>
           <div className="col_6">
-            <h3>informations personnelles</h3>
+            <h4>informations personnelles</h4>
             <div className={styles.boardInfo}>
               {myInformations.map((info) => (
                 <div key={info.id} className={styles.colInfo}>
@@ -90,7 +90,7 @@ const About = () => {
             </div>
           </div>
           <div className="col_5">
-            <h3>skills</h3>
+            <h4>Mes compétences</h4>
           </div>
         </div>
       </div>
