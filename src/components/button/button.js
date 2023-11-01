@@ -5,6 +5,7 @@ import { faArrowRight, faDownload } from '@fortawesome/free-solid-svg-icons'
 
 export const IconTypes = {
   ARROW_RIGHT: "ARROW_RIGHT",
+  DOWNLOAD: "DOWNLOAD"
 }
 
 const Button = ({ href, icon, children}) => {
