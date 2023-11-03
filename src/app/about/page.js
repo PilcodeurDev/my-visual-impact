@@ -7,8 +7,8 @@ import { FaWhatsappSquare } from "react-icons/fa";
  */
 import styles from './about.module.sass'
 import BlockDecoration from "@/components/block-decoration/block-decoration"
-import Button from "@/components/button/button";
-import cv2023 from "../../../public/Simon_Despres.pdf"
+import Button, { IconTypes } from "@/components/button/button";
+
 
 const myInformations = [
   {
@@ -95,12 +95,9 @@ const About = () => {
                 </div>
               ))}
             </div>
-            {/* <Button
-            rel="download"
-            download={cv2023}
-            icon={IconTypes.DOWNLOAD}>
-              Télécharger le cv
-            </Button> */}
+            <Button icon={IconTypes.DOWNLOAD} href="#" >
+                Télécharger le cv
+            </Button>
           </div>
           <div className="col_5">
             <h4>Mes compétences</h4>
