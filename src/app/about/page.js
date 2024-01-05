@@ -7,6 +7,7 @@ import { FaWhatsappSquare } from "react-icons/fa";
  */
 import styles from './about.module.sass'
 import BlockDecoration from "@/components/block-decoration/block-decoration"
+import GaugeBar from "@/components/gauge-bar/gauge-bar"
 import Button, { IconTypes } from "@/components/button/button";
 
 
@@ -39,7 +40,7 @@ const myInformations = [
   {
     id: 6,
     title: "Adresse :",
-    value: "Frontière Franco-Suisse",
+    value: "France-Suisse",
   },
   {
     id: 7,
@@ -85,7 +86,7 @@ const About = () => {
           <span className={styles.shadowTitle}>CV</span>
         </header>
         <div className={`${styles.rowCenter} row`}>
-          <div className="col_6">
+          <div className={`${styles.topUp} col_6`}>
             <h4>informations personnelles</h4>
             <div className={styles.boardInfo}>
               {myInformations.map((info) => (
@@ -95,12 +96,18 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <Button icon={IconTypes.DOWNLOAD} href="#" >
+            {/* <Button icon={IconTypes.DOWNLOAD} href="#" >
                 Télécharger le cv
-            </Button>
+            </Button> */}
           </div>
-          <div className="col_5">
+          <div className={`${styles.topUp} col_5`}>
             <h4>Mes compétences</h4>
+            <div className={styles.boardInfo}>
+              <div className={styles.skillPannel}>
+                {<GaugeBar/>}
+                <div className={styles.textPannel}>html</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
