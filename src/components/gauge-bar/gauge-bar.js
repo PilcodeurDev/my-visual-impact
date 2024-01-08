@@ -10,7 +10,7 @@ import ReactApexChart from 'react-apexcharts';
  */
 import styles from './gauge-bar.module.sass'
 
-function GaugeBar() {
+function GaugeBar({rateSkill}) {
   const [chartData, setChartData] = useState({
     series: [75],
     options: {
@@ -76,14 +76,16 @@ function GaugeBar() {
   });
 
   useEffect(() => {
-    setChartData({
-      series: [80], // Mettez ici la valeur de remplissage en %.
-      options: {},
-    });
-  }, []);
+    if (typeof window !== 'undefined') {
+      setChartData({
+        series: [rateSkill],
+        options: {},
+      });
+    }
+  }, [rateSkill]);
 
   return (
-    <div id="cart" className={styles.gauge}>
+    <div id="cart">
       <div id="chart">
         <ReactApexChart options={chartData.options} series={chartData.series} type="radialBar" height={350} />
       </div>

@@ -73,9 +73,34 @@ const myInformations = [
   },
 ];
 
+const skillData = [
+  {
+    name: "html",
+    rate: 90
+  },
+  {
+    name: "css",
+    rate: 80
+  },
+  {
+    name: "javascript",
+    rate: 75
+  },
+  {
+    name: "React",
+    rate: 70
+  },
+  {
+    name: "Next",
+    rate: 60
+  },
+]
+
 const About = () => {
+  const rateSkill = 20
+
   return (
-    <div>
+    <>
       {/* <BlockDecoration/> */}
       <div className="container">
         <header className={styles.title}>
@@ -87,7 +112,7 @@ const About = () => {
         </header>
         <div className={`${styles.rowCenter} row`}>
           <div className={`${styles.topUp} col_6`}>
-            <h4>informations personnelles</h4>
+            <h4 className={'pb-80'} >informations personnelles</h4>
             <div className={styles.boardInfo}>
               {myInformations.map((info) => (
                 <div key={info.id} className={styles.colInfo}>
@@ -102,16 +127,20 @@ const About = () => {
           </div>
           <div className={`${styles.topUp} col_5`}>
             <h4>Mes compétences</h4>
-            <div className={styles.boardInfo}>
-              <div className={styles.skillPannel}>
-                {<GaugeBar/>}
-                <div className={styles.textPannel}>html</div>
-              </div>
+            <div className={styles.skillPannel}>
+              {skillData.map(({ id, name, rate}) => (
+                <div key={id} className={styles.skillGauge}>
+                  {<GaugeBar rateSkill={rate} />}
+                  <div className={styles.textPannel}>
+                    {name}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 export default About

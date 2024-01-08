@@ -31,9 +31,10 @@
 .boardInfo
   display: flex
   flex-wrap: wrap
-  gap: 23px
+  gap: 40px
   font-family: var(--font-montserrat)
   font-weight: 600
+  font-size: 23px
 
 .colInfo
   display: flex
@@ -64,11 +65,19 @@
 
 .skillPannel
   display: flex
-  flex-direction: column
-  align-items: center
-  position: relative
+  flex-wrap: wrap
+  gap: 20px
 
   .textPannel
-    font-size: 25px
-    position: absolute
-    top: 80%
+    display: flex
+    justify-content: center
+    align-content: center
+    font-family: var(--font-montserrat)
+    font-weight: 600
+    font-size: 40px
+
+  .skillGauge
+    height: 250px
+    width: 250px
+    transform-origin: center
+    transform: scale(0.6)
