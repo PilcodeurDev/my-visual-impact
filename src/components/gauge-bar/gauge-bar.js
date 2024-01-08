@@ -76,7 +76,7 @@ function GaugeBar({rateSkill}) {
   });
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'null') {
       setChartData({
         series: [rateSkill],
         options: {},
