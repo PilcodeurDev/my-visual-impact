@@ -76,7 +76,7 @@ function GaugeBar({rateSkill}) {
   });
 
   useEffect(() => {
-    if (typeof window !== 'null') {
+    if (typeof window !== 'undefined') {
       setChartData({
         series: [rateSkill],
         options: {},
@@ -87,7 +87,7 @@ function GaugeBar({rateSkill}) {
   return (
     <div id="cart">
       <div id="chart">
-        {typeof window !== 'null' && (
+        {typeof window !== 'undefined' && (
           <ReactApexChart options={chartData.options} series={chartData.series} type="radialBar" height={350} />
         )}
       </div>
