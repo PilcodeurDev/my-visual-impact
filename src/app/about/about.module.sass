@@ -1,0 +1,83 @@
+@import '@/styles/utils/colors'
+
+.title
+  display: flex
+  justify-content: center
+  position: relative
+
+  h1
+    margin: 80px 0
+
+    span:nth-child(2)
+      margin-left: 8px
+      color: $lion
+
+.shadowTitle
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 110px
+  font-family: var(--font-poppins)
+  font-weight: 800
+  opacity: .2
+  z-index: -1
+
+.rowCenter
+  height: 80vh
+  justify-content: center
+  gap: 40px
+
+.boardInfo
+  display: flex
+  flex-wrap: wrap
+  gap: 40px
+  font-family: var(--font-montserrat)
+  font-weight: 600
+  font-size: 23px
+
+.colInfo
+  display: flex
+  justify-content: space-between
+  padding-right: 10px
+  width: 45%
+
+  span:nth-child(1)
+    margin-right: 10px
+    color: $lion
+    font-style: italic
+
+.iconWhatsApp
+  position: relative
+  font-size: 40px
+  margin: 13px
+  top: -7px
+  color: #2FD04A
+
+  :hover
+    color: $main-color
+    transition: all .2s linear
+
+.topUp
+  position: relative
+  height: 70vh
+  top: 0
+
+.skillPannel
+  display: flex
+  flex-wrap: wrap
+  gap: 20px
+
+  .textPannel
+    display: flex
+    justify-content: center
+    align-content: center
+    font-family: var(--font-montserrat)
+    font-weight: 600
+    font-size: 40px
+
+  .skillGauge
+    height: 250px
+    width: 250px
+    transform-origin: center
+    transform: scale(0.6)
