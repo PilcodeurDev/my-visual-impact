@@ -87,7 +87,9 @@ function GaugeBar({rateSkill}) {
   return (
     <div id="cart">
       <div id="chart">
-        <ReactApexChart options={chartData.options} series={chartData.series} type="radialBar" height={350} />
+        {typeof window !== 'null' && (
+          <ReactApexChart options={chartData.options} series={chartData.series} type="radialBar" height={350} />
+        )}
       </div>
     </div>
   );
