@@ -21,7 +21,7 @@ function GaugeBar() {
         radialBar: {
           hollow: {
             margin: 0,
-            size: '60%',
+            size: '58%',
             image: undefined,
             imageOffsetX: 0,
             imageOffsetY: 0,
@@ -51,7 +51,7 @@ function GaugeBar() {
               offsetY: -10,
               show: true,
               color: 'black',
-              fontSize: '17px'
+              fontSize: '28px'
             },
             value: {
               formatter: function (val) {
