@@ -68,16 +68,33 @@
   flex-wrap: wrap
   gap: 20px
 
-  .textPannel
-    display: flex
-    justify-content: center
-    align-content: center
-    font-family: var(--font-montserrat)
-    font-weight: 600
-    font-size: 40px
+.skill
+  height: 250px
+  width: 250px
+  transform-origin: center
+  transform: scale(0.6)
 
-  .skillGauge
-    height: 250px
-    width: 250px
-    transform-origin: center
-    transform: scale(0.6)
+.textPannel
+  display: flex
+  justify-content: center
+  align-content: center
+  font-family: var(--font-montserrat)
+  font-weight: 600
+  font-size: 40px
+  white-space: nowrap
+
+.skillLogo
+  display: flex
+  justify-content: center
+  align-content: center
+  height: 100%
+  width: 100%
+  color: #fff
+  font-size: 80px
+  font-weight: 800
+  transform: scale(1.2)
+  transition: all .4s linear
+
+  :hover
+    transform: scale(1.3)
+    transition: all .4s linear

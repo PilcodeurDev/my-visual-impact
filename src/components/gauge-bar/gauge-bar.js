@@ -3,14 +3,12 @@
  * The external imports
  */
 import React, { useEffect, useState } from 'react';
-import ReactApexChart from 'react-apexcharts';
+// import dynamic from 'next/dynamic';
+// import ReactApexChart from 'react-apexcharts';
 
-/**
- * The internal imports
- */
-import styles from './gauge-bar.module.sass'
 
-function GaugeBar({rateSkill}) {
+const GaugeBar = ({rateSkill}) => {
+  const [Chart, setChart] = useState<any>(null);
   const [chartData, setChartData] = useState({
     series: [75],
     options: {
@@ -76,20 +74,25 @@ function GaugeBar({rateSkill}) {
   });
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setChartData({
-        series: [rateSkill],
-        options: {},
-      });
-    }
+    import ('react-apexcharts').then((res) => {
+      setChart(res.default);
+    });
+    setChartData({
+      series: [rateSkill],
+      options: {},
+    });
   }, [rateSkill]);
 
   return (
     <div id="cart">
       <div id="chart">
-        {typeof window !== 'undefined' && (
-          <ReactApexChart options={chartData.options} series={chartData.series} type="radialBar" height={350} />
-        )}
+        hasType && Chart && <Chart options={chartData.options} series={chartData.series} type="radialBar" height={350} />
+          {/* <ReactApexChart
+            options={chartData.options}
+            series={chartData.series}
+            type="radialBar"
+            height={350}
+          /> */}
       </div>
     </div>
   );

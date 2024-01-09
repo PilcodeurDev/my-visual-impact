@@ -7,9 +7,8 @@ import { FaWhatsappSquare } from "react-icons/fa";
  */
 import styles from './about.module.sass'
 import BlockDecoration from "@/components/block-decoration/block-decoration"
-import GaugeBar from "@/components/gauge-bar/gauge-bar"
 import Button, { IconTypes } from "@/components/button/button";
-
+import Image from "next/image";
 
 const myInformations = [
   {
@@ -76,28 +75,39 @@ const myInformations = [
 const skillData = [
   {
     name: "html",
-    rate: 90
+    logo: <Image src="/html.png" alt="html" width={180} height={200} />
   },
   {
     name: "css",
-    rate: 80
+    logo: <Image src="/css.png" alt="css" width={220} height={220} />
   },
   {
     name: "javascript",
-    rate: 75
+    logo: <Image src="/javascript.png" alt="javascript" width={200} height={200} />
+  },
+  {
+    name: "Figma",
+    logo: <Image src="/figma.png" alt="figma" width={200} height={200} />
+  },
+  {
+    name: "Ruby on rails",
+    logo: <Image src="/ruby.png" alt="ruby" width={200} height={200} />
+  },
+  {
+    name: "PostgreSQL",
+    logo: <Image src="/postgreSQL.png" alt="postgres" width={200} height={200} />
   },
   {
     name: "React",
-    rate: 70
+    logo: <Image src="/react.png" alt="react" width={200} height={200} />
   },
   {
     name: "Next",
-    rate: 60
+    logo: <Image src="/next.png" alt="next" width={270} height={200} />
   },
 ]
 
 const About = () => {
-  const rateSkill = 20
 
   return (
     <>
@@ -128,9 +138,11 @@ const About = () => {
           <div className={`${styles.topUp} col_5`}>
             <h4>Mes compétences</h4>
             <div className={styles.skillPannel}>
-              {skillData.map(({ id, name, rate}) => (
-                <div key={id} className={styles.skillGauge}>
-                  {<GaugeBar rateSkill={rate} />}
+              {skillData.map(({ id, logo, name}) => (
+                <div key={id} className={styles.skill}>
+                  <div className={styles.skillLogo}>
+                    {logo}
+                  </div>
                   <div className={styles.textPannel}>
                     {name}
                   </div>
