@@ -21,12 +21,12 @@ const Contact = () => {
     {
       id: 2,
       info: "E-Mail",
-      value: "Simondprs62790@gmail.com",
+      value: "simondprs62790@gmail.com",
       icon: faEnvelope,
     },
     {
       id: 3,
-      info: "Télépghone",
+      info: "Téléphone",
       value: "+33 6 14 42 17 80",
       icon: faPhone,
     },
@@ -47,7 +47,7 @@ const Contact = () => {
           <div className={`${styles.topUp} col_2`}>
             <div>
               <h4>Ne soyez pas timide !</h4>
-              <p>N'hésitez pas à me contacter. Je suis toujours ouvert à discuter de nouveaux projets, d'idées créatives, maquettes de site ou aide pour projets de plus amble envergure.</p>
+              <p>N'hésitez pas à me contacter. Je suis toujours ouvert pour discuter de vos projets, idées créatives, maquettes de site ou pour des projets de plus ample envergure.</p>
             </div>
             <div>
             {data.map(({ id, info, value, icon }) => (
