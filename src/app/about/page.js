@@ -39,7 +39,7 @@ const myInformations = [
   {
     id: 6,
     title: "Adresse :",
-    value: "France-Suisse",
+    value: "Pontarlier, France",
   },
   {
     id: 7,

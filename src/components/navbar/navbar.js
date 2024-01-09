@@ -50,11 +50,11 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <ul>
-        {menuIcons.map((page) => (
-          <li key={page.id} className={styles.icon_box}>
-            <Link href={page.path} >
-              <FontAwesomeIcon icon={page.icon} className={styles.icon}/>
-              <h6>{page.text}</h6>
+        {menuIcons.map(({id, path, icon, text}) => (
+          <li key={id} className={styles.icon_box}>
+            <Link href={path} >
+              <FontAwesomeIcon icon={icon} className={styles.icon}/>
+              <h6>{text}</h6>
             </Link>
           </li>
         ))}
