@@ -8,6 +8,7 @@ import { faMap, faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
  */
 import BlockDecoration from "@/components/block-decoration/block-decoration"
 import styles from './contact.module.sass'
+import Form from "@/components/form/form";
 
 const Contact = () => {
 
@@ -61,7 +62,8 @@ const Contact = () => {
             ))}
             </div>
           </div>
-          <div className={`${styles.topUp} col_4`}>
+          <div className={`${styles.topUp} col_5`}>
+            <Form />
           </div>
         </div>
       </div>
