@@ -16,8 +16,12 @@ const onSubmit = data => console.log(data)
               name="firstname"
               id="firstname"
               placeholder="Votre Prénom"
-              {...register("firstname")}
-              />
+              {...register("firstname", {required: true})}
+              aria-invalid={errors.firstname ? "true" : "false"}
+            />
+            {errors.firstname && errors.firstname.type === "required" && (
+              <span role="alert">Le prénom est requis</span>
+            )}
           </div>
           <div className={styles.form_group}>
             <input
@@ -25,8 +29,12 @@ const onSubmit = data => console.log(data)
               name="name"
               id="name"
               placeholder="Votre Nom"
-              {...register("name")}
-              />
+              {...register("name", {required: true})}
+              aria-invalid={errors.name ? "true" : "false"}
+            />
+            {errors.name && errors.name.type === "required" && (
+              <span role="alert">Le nom est requis</span>
+            )}
           </div>
         </div>
         <div className={styles.form_group}>
@@ -35,16 +43,24 @@ const onSubmit = data => console.log(data)
             name="email"
             id="email"
             placeholder="Votre E-mail"
-            {...register("e-mail")}
-            />
+            {...register("email", {required: true})}
+            aria-invalid={errors.email ? "true" : "false"}
+          />
+          {errors.email && errors.email.type === "required" && (
+            <span role="alert">L'email est requis</span>
+          )}
         </div>
         <div className={styles.form_group}>
           <textarea
             name="message"
             id="message"
             placeholder="Votre message"
-            {...register("message")}>
+            {...register("message", {required: true})}
+            aria-invalid={errors.message ? "true" : "false"}>
           </textarea>
+          {errors.message && errors.message.type === "required" && (
+            <span role="alert">Un message est requis</span>
+          )}
         </div>
         <button type="submit">Envoyer le message</button>
       </form>
