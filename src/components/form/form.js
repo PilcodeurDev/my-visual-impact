@@ -1,6 +1,7 @@
 'use client'
 import styles from './form.module.sass'
 import { useForm } from "react-hook-form"
+import Button, { IconTypes } from "@/components/button/button";
 
 export default function Form() {
 
@@ -62,7 +63,13 @@ const onSubmit = data => console.log(data)
             <span role="alert">Un message est requis</span>
           )}
         </div>
-        <button type="submit">Envoyer le message</button>
+        <div>
+          {/* au click => pop-up de remerciement pour le message */}
+          {/* au click => envoi de mail/message par mail ou what's app */}
+          <Button icon={IconTypes.SEND} href="#" >
+            Envoyer le message
+          </Button>
+        </div>
       </form>
   )
 }
