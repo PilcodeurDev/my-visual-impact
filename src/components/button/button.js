@@ -3,7 +3,7 @@
  */
 import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight, faDownload } from '@fortawesome/free-solid-svg-icons'
+import { faArrowRight, faDownload, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 
 /**
  * The internal imports
@@ -13,12 +13,14 @@ import cv2023 from "../../../public/Simon_Despres.pdf"
 
 export const IconTypes = {
   ARROW_RIGHT: "ARROW_RIGHT",
-  DOWNLOAD: "DOWNLOAD"
+  DOWNLOAD: "DOWNLOAD",
+  SEND: "SEND",
 }
 
 const Button = ({ href, icon, children}) => {
 
   const isDownload = icon === IconTypes.DOWNLOAD;
+  const isSend = icon === IconTypes.SEND;
 
   if (isDownload) {
     return (
@@ -29,6 +31,16 @@ const Button = ({ href, icon, children}) => {
           <FontAwesomeIcon icon={faDownload} width={20} height={20} />
         </span>
       </a>
+    );
+  }
+  else if (isSend) {
+    return (
+      <button type="submit" id={styles.send} className={styles.button}>
+        {children}
+        <span className={styles.icon}>
+          <FontAwesomeIcon icon={faPaperPlane} width={30} height={30} />
+        </span>
+      </button>
     );
   }
   return (
@@ -50,31 +62,3 @@ Button.Icon = ({ iconType }) => {
 Button.Icon.displayName = 'Button.Icon';
 
 export default Button
-
-
-// type GetParams = {
-//   params: {
-//     filename: string;
-//   };
-// };
-
-// // export an async GET function. This is a convention in NextJS
-// export async function GET(req: Request, { params }: GetParams) {
-//   // filename for the file that the user is trying to download
-//   const filename = params.filename;
-
-//   // external file URL
-//   const DUMMY_URL =
-//     "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
-
-//   // use fetch to get a response
-//   const response = await fetch(DUMMY_URL);
-
-//   // return a new response but use 'content-disposition' to suggest saving the file to the user's computer
-//   return new Response(response.body, {
-//     headers: {
-//       ...response.headers, // copy the previous headers
-//       "content-disposition": `attachment; filename="${filename}"`,
-//     },
-//   });
-// }

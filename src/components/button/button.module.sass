@@ -2,9 +2,11 @@
 
 .button
   display: inline-flex
+  height: 44px
   gap: 15px
   align-items: center
   padding-left: 25px
+  padding-right: 0px !important
   font-family: var(--font-poppins)
   font-weight: 800
   color: $main-color
@@ -15,6 +17,7 @@
   text-decoration: none
   position: relative
   overflow: hidden
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25)
 
 .button::before
   content: ''
@@ -53,3 +56,11 @@
 
 .button:hover::before
   transform: translateX(0%)
+
+#send
+  border: 3px solid $main-color
+  font-weight: 600
+
+  &:hover
+    .icon svg
+      margin-right: 15px
